@@ -1,6 +1,12 @@
 #!/usr/bin/bash 
 # Simple script to send email notifications via the Sendgrid API.
 
+# Default values
+email_from=""
+email_name=""
+email_to=""
+subject=""
+message=""
 sg_key_file="./sg_key"
 
 print_usage () {
@@ -8,6 +14,8 @@ print_usage () {
    echo "EMAIL_FROM - sender's email address"
    echo "EMAIL_NAME - sender's name"
    echo "EMAIL_TO - recipient's email adress"
+   echo "SUBJECT - email subject"
+   echo "MESSAGE - email message"
    echo "SG_KEY_FILE - a path to the file with Sendgrid API key (default: ./sg_key)"
 }
 
